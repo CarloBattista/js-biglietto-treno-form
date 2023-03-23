@@ -78,6 +78,8 @@ body {
     font-weight: 600;
 }
 
+/* Section insert info */
+
 /* Input */
 
 .container_input{
@@ -145,6 +147,37 @@ body {
     transform: translate(0, 0);
 }
 
+/* Section info controls */
+
+.container_card_ticket_info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card_info{
+    width: calc(100% / 2 - 2%);
+    padding: 1vw;
+    border-radius: 0.25rem;
+    background-color: #f4f4f0;
+    color: #000;
+    border: 1px solid #000;
+    margin-bottom: 4%;
+}
+
+.card_info .heading_card{
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.card_info .result_info_card{
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 /* Media Query */
 
 @media only screen and (max-width: 980px){
@@ -160,5 +193,8 @@ body {
     .main_left{
         border-right: none;
         border-bottom: 2px solid #000;
+    }
+    .card_info{
+        width: 100%;
     }
 }

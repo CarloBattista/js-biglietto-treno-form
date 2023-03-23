@@ -20,18 +20,38 @@ per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 */
 
-function btnSubmit() { // Al click del bottone esegue queste funzione
-    const kmDaPercorrere = document.getElementById("kmDaPercorrere").value;
-    const agePeople = document.getElementById("agePeople").value;
-    let costoAlKM = 0.21; // Costo del biglietto in base ai km
+// function btnSubmit() {
+//     const kmDaPercorrere = document.getElementById("inputKm").value;
+//     const agePeople = document.getElementById("inputAge").value;
+//     let costoAlKM = 0.21;
 
-    if (agePeople < 18) { // Se la persona che acquista il biglietto ha meno di 18 anni, gli sarà applicato uno sconto del 20%
-        costoAlKM *= 0.8;
-    } else if (agePeople >= 65) { // Altrimenti Se la persona che acquista il biglietto ha più di 65 anni, gli sarà applicato uno sconto del 40%
-        costoAlKM *= 0.6;
+//     let nomePersona = document.getElementById("inputName").value;
+
+//     if (agePeople < 18) {
+//         costoAlKM *= 0.8;
+//     } else if (agePeople >= 65) {
+//         costoAlKM *= 0.6;
+//     }
+
+//     let prezzoFinale = costoAlKM * kmDaPercorrere;
+
+//     document.getElementById("display_price").innerHTML = `${prezzoFinale.toFixed(2).replace(".", ",")} €`;
+// }
+
+function btnSubmit() {
+    const kmToGo = document.querySelector("#inputKm").value;
+    const agePeople = document.querySelector("#inputAge").value;
+    let namePeople = document.querySelector("#inputName").value;
+    let priceOnKm = 0.21;
+
+    if (agePeople < 18) {
+        priceOnKm *= 0.8;
+    } else if (agePeople >= 65) {
+        priceOnKm *= 0.6;
     }
 
-    let prezzoFinale = costoAlKM * kmDaPercorrere; // Moltiplicazione costo del km * i km da percorrere
+    let finalPrice = priceOnKm * kmToGo;
 
-    document.getElementById("display_price").innerHTML = `${prezzoFinale.toFixed(2).replace(".", ",")} €`; // Visualizza dentro il div display price il prezzo finale con massimo due numeri decimali + sostituisci il punto con la virgola
+    document.querySelector("#nameSurname").innerHTML = `${namePeople}`;
+    document.querySelector("#ticketPrice").innerHTML = `${finalPrice.toFixed(2).replace(".", ",")} €`;
 }
