@@ -13,15 +13,44 @@ body {
     color: #fafafa;
 }
 
+/* Selection */
+
+::selection {
+    color: #fff;
+    background: #000;
+}
+
+/* ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f4f4f0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cbcbc6;
+}
+
 /* Utility */
 
-.color_black{
+.color_black {
     color: #000;
 }
 
 /* Header */
 
-.header{
+.header {
     position: relative;
     top: 0;
     left: 0;
@@ -35,7 +64,7 @@ body {
     border-bottom: 2px solid #000;
 }
 
-.heading_primary{
+.heading_primary {
     color: #000;
     font-size: 2rem;
     font-weight: 600;
@@ -43,7 +72,7 @@ body {
 
 /* Main */
 
-.mainView{
+.mainView {
     position: relative;
     top: 0;
     left: 0;
@@ -54,7 +83,7 @@ body {
     align-items: center;
 }
 
-.main_left{
+.main_left {
     width: 50%;
     height: 100%;
     padding: 5.6vw;
@@ -62,18 +91,18 @@ body {
     border-right: 2px solid #000;
 }
 
-.main_right{
+.main_right {
     width: 50%;
     height: 100%;
     padding: 5.6vw;
     background-color: #E2432F;
 }
 
-.container_heading{
+.container_heading {
     margin-bottom: 2rem;
 }
 
-.heading_section{
+.heading_section {
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -82,26 +111,26 @@ body {
 
 /* Input */
 
-.container_input{
+.container_input {
     margin-bottom: 2vw;
 }
 
-.container_input:last-child{
+.container_input:last-child {
     margin-bottom: 0;
 }
 
 .container_input,
-.container_input .label{
+.container_input .label {
     width: 100%;
     display: block;
 }
 
-.container_input .label{
+.container_input .label {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.container_input .input{
+.container_input .input {
     width: 100%;
     height: 50px;
     padding: 0.75rem 1rem;
@@ -111,13 +140,13 @@ body {
     border-radius: 0.25rem;
 }
 
-.input[type=text]{
+.input[type=text] {
     color: #000;
     font-size: 1rem;
     font-weight: 500;
 }
 
-.btn_submit{
+.btn_submit {
     width: 100%;
     height: 50px;
     padding: 0.75rem 1rem;
@@ -132,14 +161,14 @@ body {
     transition: all .14s ease-out;
 }
 
-.btn_submit:hover{
+.btn_submit:hover {
     background-color: #f4f4f0;
     color: #000;
-    transform: translate(-0.25rem,-0.25rem);
+    transform: translate(-0.25rem, -0.25rem);
     box-shadow: 0.25rem 0.25rem 0 #f4f4f0;
 }
 
-.btn_submit:focus{
+.btn_submit:focus {
     border: 1px solid #000;
     background-color: #000;
     color: #f4f4f0;
@@ -149,9 +178,9 @@ body {
 
 /* Section info controls */
 
-.container_card_ticket_info{
+.container_card_ticket_info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
     gap: 1rem;
@@ -161,7 +190,7 @@ body {
     justify-content: space-between; */
 }
 
-.card_info{
+.card_info {
     /* width: calc(100% / 2 - 2%); */
     padding: 1vw;
     border-radius: 0.25rem;
@@ -174,13 +203,13 @@ body {
     /* margin-bottom: 4%; */
 }
 
-.card_info .heading_card{
+.card_info .heading_card {
     color: #000;
     font-size: 0.8rem;
     font-weight: 400;
 }
 
-.card_info .result_info_card{
+.card_info .result_info_card {
     color: #000;
     font-size: 1.2rem;
     font-weight: 600;
@@ -188,25 +217,22 @@ body {
 
 /* Media Query */
 
-@media only screen and (max-width: 980px){
-    .mainView{
+@media only screen and (max-width: 980px) {
+    .mainView {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .main_left,
-    .main_right{
+    .main_right {
         width: 100%;
     }
-    .main_left{
+    .main_left {
         border-right: none;
         border-bottom: 2px solid #000;
     }
-    /* .card_info{
-        width: 100%;
-    } */
-    .container_card_ticket_info{
-        grid-template-columns: 1fr; 
+    .container_card_ticket_info {
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
 }
