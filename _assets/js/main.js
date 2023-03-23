@@ -43,6 +43,8 @@ function btnSubmit() {
     const agePeople = document.querySelector("#inputAge").value;
     let namePeople = document.querySelector("#inputName").value;
     let priceOnKm = 0.21;
+    let trainCarriage = Math.floor(Math.random() * 100).toString().padStart(1, "1");
+    let cpCode = Math.floor(Math.random() * 10000).toString().padStart(5, "0");
 
     if (agePeople < 18) {
         priceOnKm *= 0.8;
@@ -54,4 +56,6 @@ function btnSubmit() {
 
     document.querySelector("#nameSurname").innerHTML = `${namePeople}`;
     document.querySelector("#ticketPrice").innerHTML = `${finalPrice.toFixed(2).replace(".", ",")} €`;
+    document.querySelector("#trainCarriage").innerHTML = `${trainCarriage}`;
+    document.querySelector("#cpCode").innerHTML = `${cpCode}`;
 }
