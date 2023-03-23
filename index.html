@@ -12,18 +12,38 @@
 </head>
 <body>
 
-    <div class="container_insert_info">
-        <div class="container_input">
-            <label for="inputName">Nome e Cognome</label>
-            <input type="text" class="inputName" id="inputName" required>
+    <div class="header">
+        <h1 class="heading_primary">Train Ticket</h1>
+    </div>
+
+    <div class="mainView">
+        <div class="main_left">
+            <div class="container_insert_info">
+                <div class="container_heading">
+                    <h2 class="heading_section color_black">Calcola il prezzo del tuo biglietto</h2>
+                </div>
+                <div class="container_input">
+                    <label for="inputName" class="label color_black">Nome e Cognome</label>
+                    <input type="text" class="input inputName" id="inputName" required>
+                </div>
+                <div class="container_input">
+                    <label for="inputKm" class="label color_black">Quanti chilometri vuoi percorrere?</label>
+                    <input type="number" class="input inputKm" id="inputKm" required>
+                </div>
+                <div class="container_input">
+                    <label for="inputAge" class="label color_black">Quanti anni hai?</label>
+                    <input type="number" class="input inputAge" id="inputAge" required>
+                </div>
+                <div class="container_input">
+                    <button type="submit" class="btn_submit" onclick="btnSubmit()">Calcola biglietto</button>
+                </div>
+            </div>
         </div>
-        <div class="container_input">
-            <label for="inputKm">Quanti chilometri vuoi percorrere?</label>
-            <input type="number" class="inputKm" id="inputKm" required>
-        </div>
-        <div class="container_input">
-            <label for="inputAge">Quanti anni hai?</label>
-            <input type="number" class="inputAge" id="inputAge" required>
+        <div class="main_right">
+            <div class="container_heading">
+                <h2 class="heading_section">Calcola il prezzo del tuo biglietto</h2>
+            </div>
+
         </div>
     </div>
 
