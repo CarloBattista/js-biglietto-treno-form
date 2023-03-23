@@ -150,20 +150,28 @@ body {
 /* Section info controls */
 
 .container_card_ticket_info{
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    gap: 1rem;
+    /* width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .card_info{
-    width: calc(100% / 2 - 2%);
+    /* width: calc(100% / 2 - 2%); */
     padding: 1vw;
     border-radius: 0.25rem;
     background-color: #f4f4f0;
     color: #000;
     border: 1px solid #000;
-    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* margin-bottom: 4%; */
 }
 
 .card_info .heading_card{
@@ -194,7 +202,11 @@ body {
         border-right: none;
         border-bottom: 2px solid #000;
     }
-    .card_info{
+    /* .card_info{
         width: 100%;
+    } */
+    .container_card_ticket_info{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr;
     }
 }
